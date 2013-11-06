@@ -18,9 +18,14 @@
                 <option value="C">C</option>
                 <option value="CPP">C++</option>
                 <option value="erlang">Erlang</option>
-                <option value="PHP">PHP</option>
+                <option value="lisp">Lisp</option>
+                <option value="pascal">Pascal</option>
                 <option value="PERL">Perl</option>
+                <option value="PHP">PHP</option>
+                <option value="scala">Scala</option>
                 <option value="SH">SHELL</option>
+                <option value="sql">SQL</option>
+                <option value="yaml">yaml</option>
             </select>
         </label>
     </form>
