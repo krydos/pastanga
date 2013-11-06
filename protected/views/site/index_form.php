@@ -17,7 +17,9 @@
                 <option selected default value="plain">Plain Text</option>
                 <option value="C">C</option>
                 <option value="CPP">C++</option>
+                <option value="css">CSS</option>
                 <option value="erlang">Erlang</option>
+                <option value="hs">Haskell</option>
                 <option value="lisp">Lisp</option>
                 <option value="pascal">Pascal</option>
                 <option value="PERL">Perl</option>
