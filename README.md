@@ -13,5 +13,9 @@ Installation
  - rename main.default.php and console.default.php files to **main.php** and **console.php** respectively
  - change attributes for db connection in this files
  - run migration by "**yiic migrate**" command into your **protected** directory
+
+License
+-----------
+**Public domain**. You can use it as you want. 
  
 Feel free to Pull Requests!
