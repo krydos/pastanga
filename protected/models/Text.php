@@ -116,6 +116,15 @@ class Text extends CActiveRecord
         }
     }
 
+    /**
+     * generate random string
+     * needed for generation random string with length $length
+     * using for link generation
+     * 
+     * @param integer $length length of the string
+     *
+     * @return random string
+     */
     protected static function generateRandomString($length)
     {
         $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
