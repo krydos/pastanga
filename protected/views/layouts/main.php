@@ -20,8 +20,8 @@
     </div>
 </div>
 <div id="notification">
-    <label style="margin-top:27px;" for="link">Link to pasted text:
-        <input style="height: 25px;width:663px;" type="text" id="link"/>
+    <label for="link">Link to pasted text:
+        <input type="text" id="link"/>
     </label>
     <script type="text/javascript">
         $('#link').on('click',function(){

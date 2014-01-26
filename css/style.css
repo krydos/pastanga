@@ -50,6 +50,15 @@ ul li {
     z-index:9999;
 }
 
+#notification label {
+    margin-top: 27px;
+}
+
+#notification label input {
+    height: 25px;
+    width: 663px;
+}
+
 .textView {
     padding-top:30px;
     min-height: 200px;

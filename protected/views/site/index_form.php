@@ -20,6 +20,7 @@
                 <option value="css">CSS</option>
                 <option value="erlang">Erlang</option>
                 <option value="hs">Haskell</option>
+                <option value="lua">JavaScript</option>
                 <option value="lisp">Lisp</option>
                 <option value="pascal">Pascal</option>
                 <option value="PERL">Perl</option>
