@@ -3,3 +3,6 @@ assets
 protected/runtime
 protected/config/main.php
 protected/config/console.php
+vendor
+config.php
+composer.lock

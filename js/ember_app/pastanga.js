@@ -1,0 +1,1 @@
+Pastanga = Ember.Application.create();

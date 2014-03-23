@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Classes": "."
+        }
+    },
+    "require": {
+        "slim/slim": "2.*"
+    }
+}
+
