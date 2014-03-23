@@ -14,4 +14,22 @@ $pastanga->get('/', function() use($pastanga){
     $pastanga->render('index.html'); 
 });
 
+/**
+ * save text from form
+ */
+$pastanga->post('/save', function() use($pastanga){
+    $text = $pastanga->request()->post('text'); 
+    $syntax = $pastanga->request()->post('syntax');
+    $link = \Classes\Helpers::generateLink();
+
+    $db = new \Classes\Database();
+    $db->saveText($text, $syntax, $link);
+
+    echo json_encode(array(
+        'response' => array(
+            'link' => $link
+        )
+    ));
+});
+
 $pastanga->run();

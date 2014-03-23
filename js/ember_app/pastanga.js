@@ -20,7 +20,12 @@ Pastanga.IndexController = Ember.Controller.extend({
     ],
     actions: {
         sendText: function() {
-            alert(this.get('syntax'));
+            $.post('/save',
+                {
+                    text: this.get('pasteText'),
+                    syntax: this.get('syntax')
+                }
+            );
         }
     }
 });
