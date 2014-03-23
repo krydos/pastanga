@@ -60,23 +60,12 @@
                 </div>
                 <button {{action 'sendText'}} class="btn btn-success">Send</button>
                 <label for="syntax">Syntax:
-                    <select name="syntax" id="syntax">
-                        <option selected default value="plain">Plain Text</option>
-                        <option value="C">C</option>
-                        <option value="CPP">C++</option>
-                        <option value="css">CSS</option>
-                        <option value="erlang">Erlang</option>
-                        <option value="hs">Haskell</option>
-                        <option value="lua">JavaScript</option>
-                        <option value="lisp">Lisp</option>
-                        <option value="pascal">Pascal</option>
-                        <option value="PERL">Perl</option>
-                        <option value="PHP">PHP</option>
-                        <option value="scala">Scala</option>
-                        <option value="SH">SHELL</option>
-                        <option value="sql">SQL</option>
-                        <option value="yaml">yaml</option>
-                    </select>
+                    {{view Ember.Select 
+                        content=syntaxList
+                        optionValuePath="content.value"
+                        optionLabelPath="content.text"
+                        value=syntax
+                    }}
                 </label>
             </form>
         </div>
