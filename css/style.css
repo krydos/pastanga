@@ -19,7 +19,6 @@ body {
 
 .projectTitle {
     color: #bababa;
-    margin-left: 212px;
     text-decoration: none;
 }
 
@@ -75,4 +74,8 @@ ul li {
 
 .prettyprint {
     padding: 10px !important;
+}
+.center {
+    margin:auto;
+    text-align:center;
 }

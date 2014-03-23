@@ -11,10 +11,47 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8"/>
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8"/>
 </head>
-
 <body>
 <div class="container">
     <div class="wrapper">
+        <script type="text/x-handlebars">
+            <div class="center">{{outlet}}</div>
+        </script>
+    </div>
+</div>
+
+<script src="/js/libs/handlebars-1.1.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/libs/ember-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/ember_app/pastanga.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/ember_app/router.js" type="text/javascript" charset="utf-8"></script>
+
+
+<div id="notification">
+    <label for="link">Link to pasted text:
+        <input type="text" id="link"/>
+    </label>
+    <script type="text/javascript">
+        $('#link').on('click',function(){
+            $(this).select();
+        });
+    </script>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44056539-1', 'pastanga.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
+<!-- handlebars views -->
+<script type="text/x-handlebars" id="index">
         <a href="/"><h1 class="projectTitle">Pastanga</h1></a>
         <div class="pastangaForm">
             <form id="pasteForm">
@@ -43,28 +80,5 @@
                 </label>
             </form>
         </div>
-    </div>
-</div>
-<div id="notification">
-    <label for="link">Link to pasted text:
-        <input type="text" id="link"/>
-    </label>
-    <script type="text/javascript">
-        $('#link').on('click',function(){
-            $(this).select();
-        });
-    </script>
-</div>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-44056539-1', 'pastanga.com');
-  ga('send', 'pageview');
-
 </script>
-</body>
-</html>
+<!-- end handlebars views -->
