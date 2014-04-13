@@ -28,4 +28,16 @@ class Database extends \PDO {
             return true;
         }
     }
+
+    public function getTextByLink($link) {
+        $request = $this->prepare('SELECT text, type FROM pastetext WHERE link = :link');
+        $request->bindParam(':link', $link);
+
+        /**
+         * execute request
+         */
+        $request->execute();
+        
+        return $request->fetch();
+    }
 }

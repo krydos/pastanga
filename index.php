@@ -32,4 +32,22 @@ $pastanga->post('/save', function() use($pastanga){
     ));
 });
 
+/**
+ * show the saved text 
+ */
+$pastanga->get('/:link', function($link) use($pastanga){
+    $db = new \Classes\Database();
+    $entry = $db->getTextByLink($link);
+
+    /**
+     * if we have no this $link in the database
+     * then show 404 page
+     */
+    if(!$entry) {
+        $pastanga->pass(); 
+    }
+
+    $pastanga->render('view.php', array('text' => $entry['text'], 'type' => $entry['type'])); 
+});
+
 $pastanga->run();
