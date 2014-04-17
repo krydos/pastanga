@@ -4,14 +4,15 @@ namespace Classes;
 class Helpers {
 
     /**
-     * generate unique link
+     * generate unique link 
      */
     public static function generateLink($length = 4) {
        while (true) {
             $link = self::generateRandomString($length);
 
-            /* check for exist this link */
             $db = new \Classes\Database();
+
+            /* check for exist this link */
             if(!$db->linkExist($link))
                 return $link;
             else
@@ -33,10 +34,12 @@ class Helpers {
         $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
         $pass = array(); //remember to declare $pass as an array
         $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+
         for ($i = 0; $i < $length; $i++) {
             $n = rand(0, $alphaLength);
             $pass[] = $alphabet[$n];
         }
+
         return implode($pass); //turn the array into a string
     }
 }
