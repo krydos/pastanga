@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Pastebin like, copypaste, copy and paste, share, code share, source share, qr code">
     <meta name="description" content="Free pastebin like service. Share you code!">
-    <script src="/js/libs/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/miniNotification.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8"/>
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8"/>
 </head>
@@ -20,16 +17,13 @@
     </div>
 </div>
 
-<script src="/js/libs/handlebars-1.1.2.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/libs/ember-1.4.0.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/ember_app/pastanga.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/ember_app/router.js" type="text/javascript" charset="utf-8"></script>
 
 
 <div id="notification">
     <label for="link">Link to pasted text:
         <input type="text" id="link"/>
     </label>
+    <script src="/js/libs/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $('#link').on('click',function(){
             $(this).select();
@@ -47,6 +41,12 @@
   ga('send', 'pageview');
 
 </script>
+<script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/miniNotification.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/libs/handlebars-1.1.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/libs/ember-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/ember_app/pastanga.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/ember_app/router.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
 
