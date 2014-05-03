@@ -20,11 +20,25 @@ $pastanga->get('/', function() use($pastanga){
 $pastanga->post('/save', function() use($pastanga){
     $text = $pastanga->request()->post('text'); 
     $syntax = $pastanga->request()->post('syntax');
+
+    /**
+     * generate unique link for this post
+     */
     $link = \Classes\Helpers::generateLink();
 
+    /**
+     * create database object
+     */
     $db = new \Classes\Database();
+
+    /**
+     * and save the pasted text
+     */
     $db->saveText($text, $syntax, $link);
 
+    /**
+     * generate response
+     */
     echo json_encode(array(
         'response' => array(
             'link' => $link
@@ -37,6 +51,10 @@ $pastanga->post('/save', function() use($pastanga){
  */
 $pastanga->get('/:link', function($link) use($pastanga){
     $db = new \Classes\Database();
+
+    /**
+     * trying to get the pasted text by link
+     */
     $entry = $db->getTextByLink($link);
 
     /**

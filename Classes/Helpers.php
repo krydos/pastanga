@@ -5,6 +5,10 @@ class Helpers {
 
     /**
      * generate unique link 
+     *
+     * @param integer $length. default value is 4. Start length of the link
+     *
+     * @return string link
      */
     public static function generateLink($length = 4) {
        while (true) {
